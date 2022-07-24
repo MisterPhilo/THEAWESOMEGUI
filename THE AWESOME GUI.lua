@@ -23,7 +23,7 @@ local LocalPlayerFrame = Instance.new("Frame")
 local Freecam = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local UIGridLayout = Instance.new("UIGridLayout")
-local Freecam_2 = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local WorldSettingsFrame = Instance.new("Frame")
 local UIGridLayout_2 = Instance.new("UIGridLayout")
@@ -33,7 +33,7 @@ local UICorner_6 = Instance.new("UICorner")
 --Properties:
 
 TheAwesomeGUI.Name = "The Awesome GUI"
-TheAwesomeGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+TheAwesomeGUI.Parent = game:GetService("CoreGui")
 TheAwesomeGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 HolderFrame.Name = "HolderFrame"
@@ -190,22 +190,22 @@ UIGridLayout.CellSize = UDim2.new(0.393999994, 0, 0.137999997, 0)
 UIGridLayout.FillDirectionMaxCells = 2
 UIGridLayout.StartCorner = Enum.StartCorner.BottomLeft
 
-Freecam_2.Name = "Freecam"
-Freecam_2.Parent = LocalPlayerFrame
-Freecam_2.Active = false
-Freecam_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-Freecam_2.Position = UDim2.new(0.303171515, 0, 0.441311628, 0)
-Freecam_2.Selectable = false
-Freecam_2.Size = UDim2.new(0.393656969, 0, 0.13833794, 0)
-Freecam_2.Font = Enum.Font.Cartoon
-Freecam_2.Text = "Noclip"
-Freecam_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Freecam_2.TextScaled = true
-Freecam_2.TextSize = 14.000
-Freecam_2.TextWrapped = true
+Noclip.Name = "Noclip"
+Noclip.Parent = LocalPlayerFrame
+Noclip.Active = false
+Noclip.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Noclip.Position = UDim2.new(0.303171515, 0, 0.441311628, 0)
+Noclip.Selectable = false
+Noclip.Size = UDim2.new(0.393656969, 0, 0.13833794, 0)
+Noclip.Font = Enum.Font.Cartoon
+Noclip.Text = "Noclip"
+Noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Noclip.TextScaled = true
+Noclip.TextSize = 14.000
+Noclip.TextWrapped = true
 
 UICorner_5.CornerRadius = UDim.new(0, 10)
-UICorner_5.Parent = Freecam_2
+UICorner_5.Parent = Noclip
 
 WorldSettingsFrame.Name = "WorldSettingsFrame"
 WorldSettingsFrame.Parent = ExploitFrames
@@ -244,7 +244,7 @@ UICorner_6.Parent = ToggleDayNight
 
 -- Scripts:
 
-local function LEDFR_fake_script() -- TheAwesomeGUI.MainScript 
+local function MJPK_fake_script() -- TheAwesomeGUI.MainScript 
 	local script = Instance.new('LocalScript', TheAwesomeGUI)
 
 	local TheAwesomeGui = script.Parent
@@ -383,8 +383,8 @@ local function LEDFR_fake_script() -- TheAwesomeGUI.MainScript
 		
 	end)
 end
-coroutine.wrap(LEDFR_fake_script)()
-local function SVMARYK_fake_script() -- Freecam.LocalScript 
+coroutine.wrap(MJPK_fake_script)()
+local function DYVHGGS_fake_script() -- Freecam.LocalScript 
 	local script = Instance.new('LocalScript', Freecam)
 
 	local TS = game:GetService("TweenService")
@@ -882,9 +882,9 @@ local function SVMARYK_fake_script() -- Freecam.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SVMARYK_fake_script)()
-local function YIBZMOA_fake_script() -- Freecam_2.LocalScript 
-	local script = Instance.new('LocalScript', Freecam_2)
+coroutine.wrap(DYVHGGS_fake_script)()
+local function PAWLKU_fake_script() -- Noclip.LocalScript 
+	local script = Instance.new('LocalScript', Noclip)
 
 	local TS = game:GetService("TweenService")
 	
@@ -896,14 +896,15 @@ local function YIBZMOA_fake_script() -- Freecam_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YIBZMOA_fake_script)()
-local function NKJN_fake_script() -- ToggleDayNight.LocalScript 
+coroutine.wrap(PAWLKU_fake_script)()
+local function MHQHFED_fake_script() -- ToggleDayNight.LocalScript 
 	local script = Instance.new('LocalScript', ToggleDayNight)
 
 	local TS = game:GetService("TweenService")
 	
 	local day = true
-	local Sound = script.Parent.Sound
+	local Sound = Instance.new("Sound", script.Parent)
+	Sound.SoundId = ""
 	script.Parent.MouseButton1Click:Connect(function()
 		Sound:Play()
 		if day == false then
@@ -915,4 +916,4 @@ local function NKJN_fake_script() -- ToggleDayNight.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NKJN_fake_script)()
+coroutine.wrap(MHQHFED_fake_script)()
