@@ -244,7 +244,7 @@ UICorner_6.Parent = ToggleDayNight
 
 -- Scripts:
 
-local function MJPK_fake_script() -- TheAwesomeGUI.MainScript 
+local function GPMHI_fake_script() -- TheAwesomeGUI.MainScript 
 	local script = Instance.new('LocalScript', TheAwesomeGUI)
 
 	local TheAwesomeGui = script.Parent
@@ -293,7 +293,7 @@ local function MJPK_fake_script() -- TheAwesomeGUI.MainScript
 	
 		for _, child in pairs(Slot:GetChildren()) do
 			if child:IsA("Frame") then
-				child:Destroy()
+				child.Parent = ExploitFrames
 			end
 		end
 	end
@@ -301,7 +301,7 @@ local function MJPK_fake_script() -- TheAwesomeGUI.MainScript
 	local function createNewFrame()
 		warn("Creating "..Pages[CurrentPageNumber].PageName.." frame.")
 	
-		local Clone = Pages[CurrentPageNumber].MenuFrame:Clone()
+		local Clone = Pages[CurrentPageNumber].MenuFrame
 		Clone.Parent = Slot
 		Clone.Visible = true
 		
@@ -383,8 +383,8 @@ local function MJPK_fake_script() -- TheAwesomeGUI.MainScript
 		
 	end)
 end
-coroutine.wrap(MJPK_fake_script)()
-local function DYVHGGS_fake_script() -- Freecam.LocalScript 
+coroutine.wrap(GPMHI_fake_script)()
+local function HVYYP_fake_script() -- Freecam.LocalScript 
 	local script = Instance.new('LocalScript', Freecam)
 
 	local TS = game:GetService("TweenService")
@@ -882,8 +882,8 @@ local function DYVHGGS_fake_script() -- Freecam.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DYVHGGS_fake_script)()
-local function PAWLKU_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(HVYYP_fake_script)()
+local function NUGC_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local TS = game:GetService("TweenService")
@@ -896,8 +896,8 @@ local function PAWLKU_fake_script() -- Noclip.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PAWLKU_fake_script)()
-local function MHQHFED_fake_script() -- ToggleDayNight.LocalScript 
+coroutine.wrap(NUGC_fake_script)()
+local function YAZUN_fake_script() -- ToggleDayNight.LocalScript 
 	local script = Instance.new('LocalScript', ToggleDayNight)
 
 	local TS = game:GetService("TweenService")
@@ -916,4 +916,4 @@ local function MHQHFED_fake_script() -- ToggleDayNight.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MHQHFED_fake_script)()
+coroutine.wrap(YAZUN_fake_script)()
