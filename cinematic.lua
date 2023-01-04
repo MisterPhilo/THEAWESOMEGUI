@@ -5,7 +5,7 @@
 -- Q and E to go up and down
 -- Have fun!
 ------------------------------------------------------------------------
-
+task.wait(5)
 function sandbox(var,func)
 local env = getfenv(func)
 local newenv = setmetatable({},{
